@@ -1,36 +1,51 @@
+############################
 # IntelliJ / IDEA
+############################
 .idea/
 *.iml
-*.iws
 *.ipr
+*.iws
 out/
 
-# Eclipse (你这里出现了 .classpath)
+############################
+# Eclipse
+############################
 .classpath
 .project
 .settings/
 
-# macOS / Windows junk
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# sbt / scala / play build outputs
+############################
+# SBT / Scala / Play build outputs
+############################
 target/
 project/target/
 project/project/
 .sbtserver/
 .bsp/
 .metals/
-.vscode/
 
-# logs
+############################
+# Logs
+############################
 logs/
 *.log
 
-# temp / swap
+############################
+# OS junk
+############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+############################
+# Temp / swap
+############################
 *.swp
 *.tmp
-null/
-bin/
+
+############################
+# Optional: local tools
+############################
 sbt-dist/
+bin/
+null/
