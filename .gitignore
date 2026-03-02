@@ -1,0 +1,36 @@
+# IntelliJ / IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse (你这里出现了 .classpath)
+.classpath
+.project
+.settings/
+
+# macOS / Windows junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# sbt / scala / play build outputs
+target/
+project/target/
+project/project/
+.sbtserver/
+.bsp/
+.metals/
+.vscode/
+
+# logs
+logs/
+*.log
+
+# temp / swap
+*.swp
+*.tmp
+null/
+bin/
+sbt-dist/
