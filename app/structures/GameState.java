@@ -1,17 +1,26 @@
 package structures;
 
-/**
- * This class can be used to hold information about the on-going game.
- * Its created with the GameActor.
- * 
- * @author Dr. Richard McCreadie
- *
- */
+import structures.basic.Player;
+import structures.basic.Position;
+import structures.basic.Unit;
+
 public class GameState {
 
-	
-	public boolean gameInitalised = false;
-	
-	public boolean something = false;
-	
+    public boolean gameInitialised = false;
+
+    public Player humanPlayer;
+    public Player aiPlayer;
+
+    public int turn;
+    public boolean something = false;
+    public Unit humanAvatar;
+    public Unit aiAvatar;
+
+    public GameState() {
+        humanPlayer = new Player();
+        aiPlayer = new Player();
+        turn = 1;
+    }
+    public Position humanAvatarPosition;
+    public Position aiAvatarPosition;
 }

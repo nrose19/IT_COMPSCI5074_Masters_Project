@@ -1,5 +1,4 @@
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -12,7 +11,6 @@ import play.libs.Json;
 import structures.GameState;
 import structures.basic.Tile;
 import utils.BasicObjectBuilders;
-
 /**
  * This is an example of a JUnit test. In this case, we want to be able to test the logic
  * of our system without needing to actually start the web server. We do this by overriding
@@ -51,7 +49,53 @@ public class InitalizationTest {
 		// lets also check that running commands don't actually do anything, since we have no front-end
 		Tile tile = BasicObjectBuilders.loadTile(3, 2); // create a tile
 		BasicCommands.drawTile(null, tile, 0); // draw tile, but will use altTell, so nothing should happen
-		
+
+
 	}
-	
+	@Test
+	public void testPlayerHealthAndTurn() {
+
+		GameState gameState = new GameState();
+		Initalize Initalize = new Initalize();
+
+		ObjectNode dummyMessage = Json.newObject();
+
+		Initalize.processEvent(null, gameState, dummyMessage);
+
+		assertEquals(20, gameState.humanPlayer.getHealth());
+		assertEquals(20, gameState.aiPlayer.getHealth());
+
+		assertEquals(1, gameState.turn);
+	}
+
+	@Test
+	public void testManaOnTurnOne() {
+
+		GameState gameState = new GameState();
+		Initalize Initalize = new Initalize();
+
+		ObjectNode dummyMessage = Json.newObject();
+
+		Initalize.processEvent(null, gameState, dummyMessage);
+
+		assertEquals(2, gameState.humanPlayer.getMana());
+	}
+
+	@Test
+	public void testAvatarPositions() {
+
+		GameState gameState = new GameState();
+		Initalize Initalize = new Initalize();
+
+		ObjectNode dummyMessage = Json.newObject();
+
+		Initalize.processEvent(null, gameState, dummyMessage);
+
+		assertEquals(1, gameState.humanAvatarPosition.getTilex());
+		assertEquals(2, gameState.humanAvatarPosition.getTiley());
+
+		assertEquals(7, gameState.aiAvatarPosition.getTilex());
+		assertEquals(2, gameState.aiAvatarPosition.getTiley());
+	}
 }
+
