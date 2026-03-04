@@ -65,6 +65,7 @@ public class Initalize implements EventProcessor{
 
 		BasicCommands.drawUnit(out, humanAvatar, humanTile);
 		BasicCommands.drawUnit(out, aiAvatar, aiTile);
+		
 	}
 
 }
