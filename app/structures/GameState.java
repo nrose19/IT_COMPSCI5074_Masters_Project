@@ -24,3 +24,4 @@ public class GameState {
     public Position humanAvatarPosition;
     public Position aiAvatarPosition;
 }
+
