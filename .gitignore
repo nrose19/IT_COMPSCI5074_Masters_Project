@@ -1,0 +1,60 @@
+############################
+# IntelliJ / IDEA
+############################
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+############################
+# Eclipse
+############################
+.classpath
+.project
+.settings/
+
+############################
+# SBT / Scala / Play build outputs
+############################
+target/
+project/target/
+project/project/
+.sbtserver/
+.bsp/
+.metals/
+
+############################
+# Logs
+############################
+logs/
+*.log
+
+############################
+# OS junk
+############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+############################
+# Temp / swap
+############################
+*.swp
+*.tmp
+
+############################
+# Optional: local tools
+############################
+sbt-dist/
+bin/
+null/
+conf/
+project/
+scripts/
+test/
+build.sbt
+sbt
+sbt.bat
+target/
+.idea/
